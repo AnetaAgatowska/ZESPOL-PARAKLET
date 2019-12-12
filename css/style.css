@@ -1,0 +1,931 @@
+/*
+font-family: 'Saira Condensed', sans-serif;
+font-family: 'Saira Semi Condensed', sans-serif;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  /*  OGRANICZENIE I WYCENTROWANIE STRONY: max-width i margin (jesli przekroczy ilosc px, to pjawią się białe paski po bokach):*/
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+header img {
+  position: absolute;
+  height: 55vh;
+  bottom: 0;
+  right: 0;
+}
+
+header div.welcome {
+  z-index: 1;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  font-family: 'Saira Condensed', sans-serif;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+header h1 {
+  margin-top: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+header button {
+  font-family: 'Saira', sans-serif;
+  font-weight: 300;
+  line-height: 32px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  font-size: 12px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+@media (orientation: landscape) {
+  header img {
+    position: absolute;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+  }
+
+  header div.welcome {
+
+    left: -7%;
+    right: 50%;
+    top: 15%;
+  }
+
+  header h1 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  header button {
+    margin-top: 35px;
+  }
+
+}
+
+@media(orientation:landscape) and (min-width:640px) {
+
+  header h1 {
+    font-size: 24px;
+    letter-spacing: 2.5px
+  }
+
+  header h2 {
+    font-size: 22px;
+  }
+
+  header div.welcome {
+
+    left: -2%;
+    right: 50%;
+    top: 15%;
+  }
+
+  header button {
+    font-size: 16px;
+    line-height: 40px;
+    padding: 0 30px;
+  }
+}
+
+@media(orientation:landscape) and (min-width:1024px) {
+
+
+  header p {
+    font-size: 60px;
+  }
+
+  header h1 {
+    font-size: 35px;
+    letter-spacing: 2.5px;
+    margin-top: 35px;
+  }
+
+  header h2 {
+    font-size: 30px;
+  }
+
+  header div.welcome {
+
+    text-align: left;
+    left: 3%;
+    right: 50%;
+    top: 25%;
+  }
+
+  header button {
+    font-size: 22px;
+    line-height: 50px;
+    padding: 0 30px;
+    margin-top: 50px;
+  }
+
+  header img {
+    position: absolute;
+    height: 95vh;
+    bottom: 15%;
+    right: -7%;
+  }
+}
+
+@media(orientation:landscape) and (min-width:1280px) {
+
+  header div.welcome {
+
+    text-align: left;
+    left: 5%;
+    top: 15%;
+  }
+
+  header p {
+    font-size: 80px;
+  }
+
+  header h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+  }
+
+  header h2 {
+    font-size: 40px;
+  }
+
+  header button {
+    font-size: 30px;
+    padding: 0 40px;
+    border: 2px solid white;
+    margin-top: 80px;
+  }
+
+  header img {
+    position: absolute;
+    height: 100vh;
+    bottom: 7%;
+  }
+}
+
+@media(orientation:landscape) and (min-width:1600px) {
+
+
+  header p {
+    font-size: 90px;
+  }
+
+  header h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
+    margin-top: 40px;
+  }
+
+  header h2 {
+    font-size: 55px;
+  }
+
+  header button {
+    font-size: 35px;
+    line-height: 70px;
+    padding: 0 50px;
+    border: 3px solid white;
+  }
+
+  header img {
+    position: absolute;
+    height: 100vh;
+    bottom: 7%;
+  }
+}
+
+@media(orientation:portrait) and (min-width:360px) {
+
+  header h1 {
+    font-size: 22px;
+    letter-spacing: 1.5px
+  }
+
+  header h2 {
+    font-size: 22px;
+  }
+
+  header button {
+    font-size: 16px;
+    line-height: 40px;
+    padding: 0 30px;
+    letter-spacing: 2px
+  }
+}
+
+@media(orientation:portrait) and (min-width:410px) {
+
+  header h1 {
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    margin-top: 30px;
+  }
+
+  header h2 {
+    font-size: 24px;
+  }
+
+  header button {
+    font-size: 20px;
+    line-height: 40px;
+    padding: 0 30px;
+    letter-spacing: 1.5px;
+    margin-top: 40px
+  }
+
+  header img {
+    position: absolute;
+    height: 55vh;
+    bottom: 0;
+    right: -15%;
+  }
+}
+
+@media(orientation:portrait) and (min-width:768px) {
+
+  header p {
+    font-size: 60px;
+  }
+
+  header h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+  }
+
+  header h2 {
+    font-size: 32px;
+
+  }
+
+  header button {
+    font-size: 28px;
+    line-height: 50px;
+    padding: 0 30px;
+    letter-spacing: 1.5px;
+    margin-top: 35px
+  }
+
+  header img {
+    position: absolute;
+    height: 60vh;
+    bottom: 0;
+    right: 0%;
+  }
+}
+
+@media(min-width:1024px) {
+
+  header button {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  header button:hover {
+
+    background-color: white;
+    color: #111;
+  }
+}
+
+/*sekcja 1 - nasze cechy*/
+
+.features {
+  max-width: 1600px;
+  margin: 50px auto 0;
+  padding: 5%;
+  text-align: center;
+}
+
+.features h1 {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.features h2 {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.features p {
+  font-family: 'Saira Semi Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.features img {
+  width: 100%;
+  /*  width rozwiązało nam cały problem z szerokoscią zdjęc!*/
+  max-width: 718px;
+  margin: 5px 0;
+}
+
+@media(min-width:360px) {
+
+  .features h1 {
+    font-size: 28px;
+  }
+
+  .features h2 {
+    font-size: 24px;
+  }
+
+  .features p {
+    font-size: 16px;
+  }
+}
+
+@media(min-width:768px) {
+
+  .features h1 {
+    font-size: 34px;
+  }
+
+  .features h2 {
+    font-size: 30px;
+  }
+
+  .features p {
+    font-size: 20px;
+  }
+}
+
+@media(min-width:1024px) {
+
+
+  .features {
+    margin-top: 50px;
+    padding: 5% 2%;
+    text-align: center;
+  }
+
+  .feature {
+    float: left;
+    width: 33%;
+    padding: 30px;
+  }
+
+  .features h1 {
+    font-size: 42px;
+  }
+
+  .features h2 {
+    font-size: 24px;
+  }
+
+  .features p {
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+
+@media(min-width:1600px) {
+
+  .feature {
+    float: left;
+    width: 33%;
+    padding: 20px 40px;
+  }
+
+  .features h1 {
+    font-size: 60px;
+  }
+
+  .features h2 {
+    font-size: 36px;
+    line-height: 120%;
+  }
+
+  .features p {
+    font-size: 21px;
+    line-height: 140%;
+  }
+}
+
+/*  SEKCJA II - PORTFLIO*/
+
+.portfolio {
+  background-color: black;
+  padding: 10px 0 30px 0;
+}
+
+.portfolio h1 {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+}
+
+.portfolio .web img {
+  width: 100%;
+  /*  height: 288px; - zmniejszyć wyskość zdjęcia, bo inaczej mam różną wysokość divów - określenie wysokości grafiki na sztywno powoduje jej rozciąganie*/
+
+}
+
+.portfolio .about {
+  color: white;
+  font-family: 'Saira Semi Condensed', sans-serif;
+  font-weight: normal;
+  padding: 10px 20px 20px 0;
+  text-align: left;
+}
+
+.portfolio .about h2 {
+  font-size: 18px;
+  border-bottom: 2px solid white;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  text-indent: 20px;
+  text-transform: uppercase;
+
+
+}
+
+.portfolio .about p {
+  font-size: 12px;
+  padding-left: 20px;
+}
+
+.portfolio .project {
+  max-width: 1400px;
+  margin 0 auto 20px;
+}
+
+/*ustawianie koloru tła na nieparzystych projektach*/
+.portfolio .project:nth-of-type(odd) {
+  background-color: rgb(100, 0, 50);
+}
+
+.portfolio .project:nth-of-type(even) {
+  background-color: dimgrey;
+}
+
+@media(min-width:768px) {
+  .portfolio h1 {
+    font-size: 36px;
+  }
+
+  .portfolio .about h2 {
+    font-size: 28px;
+    text-indent: 20px;
+  }
+
+  .portfolio .about p {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  .portfolio .project {
+    margin-bottom: 40px;
+  }
+}
+
+@media(orientation:landscape) {
+
+  .web,
+  .about {
+    width: 50%;
+    float: left;
+  }
+
+  .web img {
+    display: block;
+  }
+
+  .portfolio .project:nth-of-type(even) .web {
+    float: right;
+  }
+}
+
+@media(orientation:landscape) and (min-width:1400px) {
+  .portfolio h1 {
+    font-size: 60px;
+    padding: 30px 0;
+  }
+
+  .portfolio .about h2 {
+    font-size: 28px;
+    text-indent: 20px;
+    padding-top: 50px;
+    margin-bottom: 40px
+  }
+
+  .portfolio .about p {
+    font-size: 18px;
+    padding-left: 20px;
+    line-height: 180%;
+  }
+
+  .portfolio .project {
+    margin-bottom: 40px;
+  }
+}
+
+.portfolio .project:nth-of-type(even) .about {
+  padding-right: 0;
+}
+
+.portfolio .project:nth-of-type(even) .about h2 {
+  text-indent: 0;
+  margin-left: 20px;
+}
+
+.portfolio .project:nth-of-type(even) .about p {
+  padding-right: 20px;
+}
+
+/*SEKCJA SLOGAN*/
+
+.slogan {
+  text-align: center;
+  background-image: url(../jpg/motto.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  background-attachment: fixed;
+}
+
+.slogan h1 {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.slogan p {
+  font-family: 'Saira Semi Condensed', sans-serif;
+
+  font-size: 12px;
+  line-height: 130%;
+  padding: 10px 20px;
+}
+
+.slogan p.text {
+
+  margin-top: 50px;
+}
+
+.slogan p.author {
+  font-size: 10px;
+}
+
+.slogan .bg {
+  padding: 30px 10px;
+  background-color: rgba(121, 7, 51, 0.3);
+}
+
+@media(orientation:landscape) {
+  .slogan p {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width:768px) {
+  .slogan h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+  }
+
+  .slogan p {
+    font-size: 26px;
+    line-height: 110%;
+    padding: 10px 20px;
+  }
+
+  .slogan p.text {
+    margin-top: 10px;
+  }
+
+  .slogan p.author {
+    font-size: 18px;
+  }
+
+  .slogan .bg {
+    padding: 60px 10px;
+  }
+
+}
+
+@media (min-width:1024px) {
+  .slogan h1 {
+    margin-top: 0px;
+  }
+
+  .slogan p {
+    width: 55%;
+  }
+
+  .slogan .bg {
+    padding: 140px 10px;
+  }
+}
+
+
+/*SEKCJA HOBBY*/
+
+/*.hobby div lub .hobby .item - oba sposoby zadzialają*/
+.hobby {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.hobby .item {
+  height: 35vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hobby .item:nth-of-type(1) {
+  background-image: url(../jpg/hobby1jedzenie.jpg);
+}
+
+.hobby .item:nth-of-type(2) {
+  background-image: url(../jpg/hobby2zabawa.jpg);
+}
+
+.hobby .item:nth-of-type(3) {
+  background-image: url(../jpg/hobby3pozowanie.jpg);
+}
+
+.hobby .item:nth-of-type(4) {
+  background-image: url(../jpg/hobby4wyglupy.jpg);
+}
+
+.hobby .item p {
+  font-family: 'Saira Semi Condensed', sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  /*  line-height: 35vh;*/
+  text-shadow: 0 0 4px black;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 5px 0;
+
+}
+
+.hobby h1 {
+  padding: 20px;
+  font-family: 'Saira Condensed', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+
+@media(min-width:533px) {
+
+  .hobby .item {
+    float: left;
+    width: 50%;
+    height: 45vh;
+  }
+}
+
+@media(min-width:768px) {
+
+  .hobby .item {
+    height: 40vh;
+  }
+
+  .hobby h1 {
+    font-size: 48px;
+    margin-top: 30px
+  }
+
+  .hobby .item p {
+    font-size: 26px;
+    padding: 10px 0;
+  }
+}
+
+@media(min-width:1024px) {
+
+  .hobby .item {
+    height: 50vh;
+  }
+
+  .hobby .item p {
+    padding: 0;
+    line-height: 50vh;
+    opacity: 0;
+    /*    tekst i przysloniecie maja być niewidoczne - dlatego dajemy opacity na 0*/
+    transition: 1s;
+    cursor: default;
+  }
+
+  .hobby .item:hover p {
+    opacity: 1;
+  }
+
+  .hobby .item {
+    background-size: 100%;
+    transition: 1s;
+  }
+
+  .hobby .item:hover {
+    background-size: 120%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hobby .item {
+    height: 50vh;
+  }
+
+  .hobby h1 {
+    font-size: 60px;
+  }
+
+  .hobby .item p {
+    font-size: 36px;
+  }
+}
+
+/*SEKCJA - KONAKT*/
+
+.contact {
+  background-color: #000;
+  padding: 30px 20px;
+}
+
+.contact h1 {
+  color: white;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact input,
+.contact button,
+.contact textarea {
+  width: 100%;
+  margin-bottom: 25px;
+  font-family: 'Saira Semi Condensed', sans-serif;
+  font-size: 12px;
+}
+
+.contact input {
+
+  height: 36px;
+  padding: 5px;
+}
+
+.contact textarea {
+  height: 120px;
+}
+
+.contact button {
+  font-size: 14px;
+  line-height: 40px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.contact .wrap {
+  padding: 20px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.contact .socials {
+  padding-top: 30px;
+  font-size: 0px;
+}
+
+.contact .social {
+  padding: 10px 0;
+  color: white;
+  font-family: 'Saira Condensed', sans-serif;
+}
+
+.contact .social img {
+  float: left;
+}
+
+.contact .social span {
+  line-height: 72px;
+  padding-left: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+@media (min-width:533px) {
+  .contact .social {
+    display: inline-block;
+    width: 50%;
+  }
+}
+
+@media (min-width:1024px) {
+
+
+  .contact form,
+  .contact .socials {
+    float: left;
+    width: 50%;
+    padding: 0 20px;
+  }
+
+  .contact .social {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .contact h1 {
+    font-size: 40px;
+  }
+
+  .contact input {
+    height: 46px;
+    font-size: 24px;
+  }
+
+  .contact textarea {
+    height: 180px;
+    font-size: 24px;
+  }
+
+  .contact button {
+    font-size: 24px;
+    line-height: 50px;
+    transition: .3s;
+    cursor: poiner;
+  }
+
+  .contact input,
+  .contact button,
+  .contact textarea {
+    margin-bottom: 35px;
+
+  }
+
+  .contact .social span {
+    font-size: 14px;
+  }
+
+  .contact button:hover {
+    color: black;
+    background-color: white;
+  }
+}
+
+footer {
+  background-color: grey;
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+  font-size: 18px;
+}
